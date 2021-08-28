@@ -1,4 +1,4 @@
-import react, { useContext, useState } from "react";
+import { useState } from "react";
 import {
   Form,
   FormGroup,
@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { v4 } from "uuid";
 
-const ToDoForm = () => {
+const ToDoForm = ({ addTodos }) => {
   const [todoString, SetTodoString] = useState("");
 
   const handleSubmit = (e) => {
@@ -22,6 +22,9 @@ const ToDoForm = () => {
       todoString,
       id: v4(),
     };
+    //Todo
+    addTodos(todo);
+
     SetTodoString("");
   };
 
