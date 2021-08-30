@@ -29,23 +29,25 @@ const ToDoForm = ({ addTodos }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <FormGroup>
-        <InputGroup>
-          <Input
-            type="text"
-            name="todo"
-            id="todo"
-            placeholder="Enter a todo String"
-            value={todoString}
-            onChange={(e) => SetTodoString(e.target.value)}
-          />
-          <InputGroupAddon addonType="prepend">
-            <Button>Add Todo</Button>
-          </InputGroupAddon>
-        </InputGroup>
-      </FormGroup>
-    </Form>
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <InputGroup>
+            <Input
+              type="text"
+              name="todo"
+              id="todo"
+              placeholder="Enter a todo String"
+              value={todoString}
+              onChange={(e) => SetTodoString(e.target.value)}
+            />
+            <InputGroupAddon addonType="prepend">
+              <Button>Add Todo</Button>
+            </InputGroupAddon>
+          </InputGroup>
+        </FormGroup>
+      </Form>
+    </Container>
   );
 };
 
